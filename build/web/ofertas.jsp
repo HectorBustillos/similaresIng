@@ -9,11 +9,12 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
      
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -50,7 +51,8 @@
                 <h1>Tabla de Ofertas</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalOfertas">Añadir</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarOfertas">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalOfertas">Añadir Datos</button>
             </div>
             
             
@@ -108,6 +110,23 @@
               </div>
             </div>
             
+            <!-- Modal -->
+            <div class="modal fade" id="borrarOfertas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Seguro que quieres borrar la tabla Ofertas?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <button type="submit" class="btn btn-danger">Borrar Tabla</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
         </div>
         <script src="assets/js/jquery-2.2.3.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>

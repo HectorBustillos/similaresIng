@@ -9,12 +9,13 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="icon" href="simidoc.ico">
         
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
      
     </head>
     <body ng-controller="mainController">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -42,8 +43,8 @@
               <li><a href="doctores.jsp">Doctores</a></li>
               <li><a href="consultas.jsp">Consultas</a></li>
             </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </nav>
         <div class="wrap">
             <div class="row">

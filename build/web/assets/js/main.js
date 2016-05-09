@@ -1,6 +1,3 @@
-var simi = angular.module('simi', []);
+$(document).ready(function(){
 
-simi.controller('ng-main', ['$scope', '$log', function($scope, $log){
-  
-  
-}]);
+});
