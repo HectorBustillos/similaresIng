@@ -1,3 +1,4 @@
+<%@page import="clases.Conexion"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -63,23 +64,39 @@
                         <th>Nombre</th>
                         <th>Telefono</th>
                         <th>Direccion</th>
-                        <th>Email</th>
-                        <th>Ciudad</th>
                         <th>Codigo Postal</th>
+                        <th>Ciudad</th>
                         <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        Conexion cx = new Conexion();
+                        
+                        ResultSet rs = cx.consultar("select * from clientes ");            
+
+                      while(rs.next()){ 
+                        String idCliente = rs.getString("idCliente");
+                        String nombre = rs.getString("nombre");
+                        String apeidoPaterno = rs.getString("apeidoPaterno");
+                        String apeidoMaterno = rs.getString("apeidoMaterno");
+                        String telefono = rs.getString("telefono");
+                        String direccion = rs.getString("direccion");
+                        String codigoPostal = rs.getString("codigoPostal");
+                        String ciudad = rs.getString("ciudad");
+                        String estado = rs.getString("estado");
+
+                    %>
                         <tr>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
+                            <td> <%= idCliente %> </td>
+                            <td> <%= nombre + " " + apeidoPaterno + " " + apeidoMaterno %></td>
+                            <td> <%= telefono %> </td>
+                            <td> <%= direccion %> </td>
+                            <td> <%= codigoPostal %> </td>
+                            <td> <%= ciudad %> </td>
+                            <td> <%= estado %> </td>
                         </tr>
+                    <%}%>
                 </tbody>
             </table>
             
@@ -91,46 +108,42 @@
                       <h4 class="modal-title" id="myModalLabel">Añadir un Cliente</h4>
                     </div>
                     <div class="modal-body">
-                      <form>
-                          <div class="form-group">
+                      <form action="ClientesSVT" method="post" >
+<!--                          <div class="form-group">
                             <label>ID Cliente</label>
-                            <input type="text" class="form-control" >
-                          </div>
+                            <input name="txtClienteIdcliente" type="text" class="form-control" >
+                          </div>-->
                           <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" class="form-control"  >
+                            <input name="txtClienteNombre" type="text" class="form-control"  >
                           </div>
                           <div class="form-group">
                             <label>A. Paterno</label>
-                            <input type="text" class="form-control" >
+                            <input name="txtClienteApeidoPaterno" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
                             <label>A. Materno</label>
-                            <input type="text" class="form-control" >
+                            <input name="txtClienteApeidoMaterno" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
                             <label>Telefono</label>
-                            <input type="text" class="form-control" >
+                            <input name="txtClienteTelefono" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
                             <label>Direccion</label>
-                            <input type="text" class="form-control" >
+                            <input name="txtClienteDireccion" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control">
+                            <label >Codigo Postal</label>
+                            <input name="txtClienteCodigoPostal" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
                             <label>Ciudad</label>
-                            <input type="text" class="form-control" >
+                            <input name="txtClienteCiudad" type="text" class="form-control" >
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Codigo Postal</label>
-                            <input type="text" class="form-control" >
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Estado</label>
-                            <input type="text" class="form-control" >
+                            <label >Estado</label>
+                            <input name="txtClienteEstado" type="text" class="form-control" >
                           </div>
                           <div class="modal-footer">
                               <button type="submit" class="btn btn-default">Guardar Cambios</button>

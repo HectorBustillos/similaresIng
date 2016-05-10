@@ -1,3 +1,4 @@
+<%@page import="clases.Conexion"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -66,12 +67,24 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        Conexion cx = new Conexion();
+                        
+                        ResultSet rs = cx.consultar("select * from departamentos ");            
+
+                      while(rs.next()){ 
+                        String idSucursal = rs.getString("idSucursal");
+                        String numeroEmpleado = rs.getString("numeroEmpleado");
+                        String telefono = rs.getString("telefono");
+                        String direccion = rs.getString("direccion");
+                    %>
                         <tr>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
+                            <td> <%= idSucursal %> </td>
+                            <td> <%= numeroEmpleado %> </td>
+                            <td> <%= telefono %> </td>
+                            <td> <%= direccion %> </td>
                         </tr>
+                    <%}%>
                 </tbody>
             </table>
             

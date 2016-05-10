@@ -1,3 +1,4 @@
+<%@page import="clases.Conexion"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -63,19 +64,38 @@
                         <th>Nombre</th>
                         <th>Email</th>
                         <th>Seguro Social</th>
+                        <th>Codigo</th>
                         <th>Puesto</th>
                         <th>Turno</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        Conexion cx = new Conexion();
+                        
+                        ResultSet rs = cx.consultar("select * from departamentos ");            
+
+                      while(rs.next()){ 
+                        String idEmpleado = rs.getString("idEmpleado");
+                        String nombre = rs.getString("nombre");
+                        String apeidoPaterno = rs.getString("apeidoPaterno");
+                        String apeidoMaterno = rs.getString("apeidoMaterno");
+                        String email = rs.getString("email");
+                        String seguroSocial = rs.getString("seguroSocial");
+                        String codigo = rs.getString("codigo");
+                        String puesto = rs.getString("puesto");
+                        String turno = rs.getString("turno");
+                    %>
                         <tr>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
+                            <td> <%= idEmpleado %> </td>
+                            <td> <%= nombre + " " + apeidoPaterno + " " + apeidoMaterno %></td>
+                            <td> <%= email %> </td>
+                            <td> <%= seguroSocial %> </td>
+                            <td> <%= codigo %> </td>
+                            <td> <%= puesto %> </td>
+                            <td> <%= turno %> </td>
                         </tr>
+                    <%}%>
                 </tbody>
             </table>
             

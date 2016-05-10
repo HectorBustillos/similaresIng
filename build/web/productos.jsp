@@ -1,3 +1,4 @@
+<%@page import="clases.Conexion"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -66,12 +67,24 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        Conexion cx = new Conexion();
+                        
+                        ResultSet rs = cx.consultar("select * from departamentos ");            
+
+                      while(rs.next()){ 
+                        String idProducto = rs.getString("idProducto");
+                        String descripcion = rs.getString("descripcion");
+                        String precio = rs.getString("precio");
+                        String fecha = rs.getString("cantidad");
+                    %>
                         <tr>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
-                            <td>Algun dato</td>
+                            <td> <%= idProducto %> </td>
+                            <td> <%= descripcion %> </td>
+                            <td> <%= precio %> </td>
+                            <td> <%= fecha %> </td>
                         </tr>
+                    <%}%>
                 </tbody>
             </table>
             

@@ -54,33 +54,33 @@
                         Alguna descripcion de la pagina aqui...
                     </p>
                 </div>
-                <div class="col-sm-4 col-md-3">
+                <div class="col-sm-4 col-md-3 hero-feature">
                   <div class="thumbnail">
                     <img src="assets/img/clientes.jpg" alt="img" >
                     <div class="caption">
                       <h3>Clientes</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="clientes.jsp" class="btn btn-default" role="button">Ver Clientes</a></p>
+                      <p><a href="clientes.jsp" class="btn btn-primary" role="button">Ver Clientes</a></p>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4 col-md-3">
+                <div class="col-sm-4 col-md-3 hero-feature">
                   <div class="thumbnail">
                     <img src="assets/img/productos.jpg" alt="img" >
                     <div class="caption">
                       <h3>Productos</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="productos.jsp" class="btn btn-default" role="button">Ver Productos</a></p>
+                      <p><a href="productos.jsp" class="btn btn-primary" role="button">Ver Productos</a></p>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4 col-md-3">
+                <div class="col-sm-4 col-md-3 hero-feature">
                   <div class="thumbnail">
                     <img src="assets/img/ventas.jpg" alt="img" >
                     <div class="caption">
                       <h3>Ventas</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="ventas.jsp" class="btn btn-default" role="button">Ver Ventas</a></p>
+                      <p><a href="ventas.jsp" class="btn btn-primary" role="button">Ver Ventas</a></p>
                     </div>
                   </div>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="caption">
                       <h3>Empleados</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="empleados.jsp" class="btn btn-default" role="button">Ver Empleados</a></p>
+                      <p><a href="empleados.jsp" class="btn btn-primary" role="button">Ver Empleados</a></p>
                     </div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@
                     <div class="caption">
                       <h3>Sucursales</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="sucursales.jsp" class="btn btn-default" role="button">Ver Sucursales</a></p>
+                      <p><a href="sucursales.jsp" class="btn btn-primary" role="button">Ver Sucursales</a></p>
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@
                     <div class="caption">
                       <h3>Ofertas</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="ofertas.jsp" class="btn btn-default" role="button">Ver Ofertas</a></p>
+                      <p><a href="ofertas.jsp" class="btn btn-primary" role="button">Ver Ofertas</a></p>
                     </div>
                   </div>
                 </div>
@@ -120,7 +120,7 @@
                     <div class="caption">
                       <h3>Departamentos</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="departamentos.jsp" class="btn btn-default" role="button">Ver Departamentos</a></p>
+                      <p><a href="departamentos.jsp" class="btn btn-primary" role="button">Ver Departamentos</a></p>
                     </div>
                   </div>
                 </div>
@@ -130,7 +130,7 @@
                     <div class="caption">
                       <h3>Doctores</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="#" class="btn btn-default" role="button">Ver Doctores</a></p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ver Doctores</a></p>
                     </div>
                   </div>
                 </div>
@@ -140,14 +140,13 @@
                     <div class="caption">
                       <h3>Consultas</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="consultas.jsp" class="btn btn-default" role="button">Ver Consultas</a></p>
+                      <p><a href="consultas.jsp" class="btn btn-primary" role="button">Ver Consultas</a></p>
                     </div>
                   </div>
                 </div>
              </div>
             
         </div>
-        <script src="assets/js/angular.min.js"></script>
         <script src="assets/js/jquery-2.2.3.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/main.js"></script>
