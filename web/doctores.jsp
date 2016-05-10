@@ -70,7 +70,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select * from departamentos ");            
+                        ResultSet rs = cx.consultar("select * from doctores ");            
 
                       while(rs.next()){ 
                         String idDoctor = rs.getString("idDoctor");
@@ -98,30 +98,30 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Doctor</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                    <form action="DoctoresSVT" method="post">
+<!--                        <div class="form-group">
                           <label>ID Doctor</label>
                           <input type="text" class="form-control" >
-                        </div>
+                        </div>-->
                         <div class="form-group">
                           <label>Nombre</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtNombre" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>A. Paterno</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtApeidoPaterno" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>A. Materno</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtApeidoMaaterno" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Telefono</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtTelefono" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Direccion</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtDireccion" type="text" class="form-control" >
                         </div>
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

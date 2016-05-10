@@ -13,42 +13,42 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "OfertasSVT", urlPatterns = {"/OfertasSVT"})
-public class OfertasSVT extends HttpServlet {
+@WebServlet(name = "SucursalesSVT", urlPatterns = {"/SucursalesSVT"})
+public class SucursalesSVT extends HttpServlet {
 
     private Conexion cnn;
-    private Ofertas ofe;
-    private DatosOfertas datosO;
+    private Sucursales suc;
+    private DatosSucursales datosS;
 
-
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
 
+ 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         try {
             cnn = new Conexion();
-            ofe = new Ofertas();
+            suc = new Sucursales();
             
-//            ofe.setIdoferta(Integer.parseInt(request.getParameter("txtIdoferta")));
-            ofe.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
-            ofe.setOferta(Integer.parseInt(request.getParameter("txtOferta")));
-            ofe.setFecha(request.getParameter("txtFecha"));
+//            suc.setIdsucursales(Integer.parseInt(request.getParameter("txtIdsucursales")));
+            suc.setNumempleado(Integer.parseInt(request.getParameter("txtNumempleado")));
+            suc.setTelefono(request.getParameter("txtTelefono"));
+            suc.setDireccion(request.getParameter("txtDireccion"));
             
-            
-            datosO = new DatosOfertas(cnn);
-            datosO.insertOferta(ofe);
-            
+            datosS = new DatosSucursales(cnn);
+            datosS.insertSucursales(suc);
+           
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(OfertasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SucursalesSVT.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(OfertasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SucursalesSVT.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
         
         
     }

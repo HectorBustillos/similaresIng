@@ -93,18 +93,25 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Departamento</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                    <form action="DepartamentosSVT" method="post">
+<!--                        <div class="form-group">
                           <label>ID Departamento</label>
                           <input type="text" class="form-control" >
-                        </div>
+                        </div>-->
                         <div class="form-group">
                           <label>Nombre</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtNombre" type="text" class="form-control" >
+<!--                          <select name="txtNombre" class="form-control">
+                            <option value="Medicinas">Medicinas</option>
+                            <option value="Dulcecitos">Dulcecitos</option>
+                            <option value="Condones">Condones</option>
+                            <option value="Papitas">Papitas</option>
+                            <option value="Jarabes">Jarabes</option>
+                          </select>-->
                         </div>
                         <div class="form-group">
                           <label>ID Producto</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtIdproducto" type="text" class="form-control" >
                         </div>  
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

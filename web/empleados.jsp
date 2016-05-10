@@ -73,7 +73,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select * from departamentos ");            
+                        ResultSet rs = cx.consultar("select * from empleados ");            
 
                       while(rs.next()){ 
                         String idEmpleado = rs.getString("idEmpleado");
@@ -107,38 +107,38 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Empleado</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                          <label>ID Empleado</label>
-                          <input type="text" class="form-control" >
-                        </div>
+                      <form action="EmpleadosSVT" method="post">
                         <div class="form-group">
                           <label>Nombre</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtNombre" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>A. Paterno</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtApeidoPaterno" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>A. Materno</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtApeidoMaterno" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Email</label>
-                          <input type="email" class="form-control" >
+                          <input name="txtEmail" type="email" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Seguro Social</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtSeguroSocial" type="number" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                          <label>Codigo</label>
+                          <input name="txtCodigo" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Puesto</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtPuesto" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Turno</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtTurno" type="text" class="form-control" >
                         </div>
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

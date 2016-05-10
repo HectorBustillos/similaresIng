@@ -70,7 +70,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select * from departamentos ");            
+                        ResultSet rs = cx.consultar("select * from sucursales ");            
 
                       while(rs.next()){ 
                         String idSucursal = rs.getString("idSucursal");
@@ -96,22 +96,22 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir una Sucursal</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                    <form action="SucursalesSVT" method="post">
+<!--                        <div class="form-group">
                           <label>ID Sucursal</label>
                           <input type="text" class="form-control" >
-                        </div>
+                        </div>-->
                         <div class="form-group">
                           <label>Cantidad de Empleados</label>
-                          <input type="number" class="form-control" >
+                          <input name="txtNumempleado" name="" type="number" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Telefono</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtTelefono" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Direccion</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtDireccion" type="text" class="form-control" >
                         </div>
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

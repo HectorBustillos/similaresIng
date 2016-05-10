@@ -60,7 +60,7 @@
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
-                        <th>Producto</th>
+                        <th>#Producto</th>
                         <th>Descripccion</th>
                         <th>Precio</th>
                         <th>cantidad</th>
@@ -70,7 +70,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select * from departamentos ");            
+                        ResultSet rs = cx.consultar("select * from productos ");            
 
                       while(rs.next()){ 
                         String idProducto = rs.getString("idProducto");
@@ -81,7 +81,7 @@
                         <tr>
                             <td> <%= idProducto %> </td>
                             <td> <%= descripcion %> </td>
-                            <td> <%= precio %> </td>
+                            <td> <%="$" + precio %> </td>
                             <td> <%= fecha %> </td>
                         </tr>
                     <%}%>
@@ -96,22 +96,22 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Producto</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                    <form action="ProductosSVT" method="post">
+<!--                        <div class="form-group">
                           <label>ID Producto</label>
-                          <input type="text" class="form-control">
-                        </div>
+                          <input name="txtIdproducto" type="text" class="form-control">
+                        </div>-->
                         <div class="form-group">
                           <label>Descripcion</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtdescripcion" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Precio</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtPrecio" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Cantidad</label>
-                          <input type="number" class="form-control" >
+                          <input name="txtCantidad" type="number" class="form-control" >
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

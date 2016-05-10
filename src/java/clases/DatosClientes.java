@@ -9,7 +9,7 @@ public class DatosClientes {
     private Clientes cl;
 
 public DatosClientes(Conexion cnn){
-        this.cnn = cnn;
+    this.cnn = cnn;
 }    
 public void insertClientes(Clientes cl)  throws SQLException{
     this.cl = cl;
@@ -25,12 +25,6 @@ public void insertClientes(Clientes cl)  throws SQLException{
                     + ", '"+ cl.getCodigoPostal() +"'"
                     + ", '"+ cl.getCiudad() +"'"
                     + ", '"+ cl.getEstado() +"')");
-    
-    
-    
-    
-    
-    
 }   
 
 }

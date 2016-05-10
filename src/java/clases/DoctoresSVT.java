@@ -34,7 +34,7 @@ public class DoctoresSVT extends HttpServlet {
             cnn = new Conexion();
             doc = new Doctores();
             
-            doc.setIddoctores(Integer.parseInt(request.getParameter("txtIddoctores")));
+//            doc.setIddoctores(Integer.parseInt(request.getParameter("txtIddoctores")));
             doc.setNombre(request.getParameter("txtNombre"));
             doc.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
             doc.setApeidoMaterno(request.getParameter("txtApeidoMaaterno"));

@@ -70,7 +70,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select * from departamentos ");            
+                        ResultSet rs = cx.consultar("select * from ofertas ");            
 
                       while(rs.next()){ 
                         String idOfertas = rs.getString("idOfertas");
@@ -96,22 +96,22 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir una Oferta</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                    <form action="OfertasSVT" method="post">
+<!--                        <div class="form-group">
                           <label>ID Oferta</label>
                           <input type="text" class="form-control" >
-                        </div>
+                        </div>-->
                         <div class="form-group">
                           <label>ID Producto</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtIdproducto" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Oferta</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtOferta" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Fecha</label>
-                          <input type="date" class="form-control" >
+                          <input name="txtFecha" type="date" class="form-control" >
                         </div>
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet(name = "ConsultasSVT", urlPatterns = {"/ConsultasSVT"})
 public class ConsultasSVT extends HttpServlet {
     
@@ -35,19 +34,14 @@ public class ConsultasSVT extends HttpServlet {
             cons = new Consultas();
             
             
-            cons.setNumeroConsulta(Integer.parseInt(request.getParameter("txtNumeroConsulta")));
+//            cons.setNumeroConsulta(Integer.parseInt(request.getParameter("txtNumeroConsulta")));
             cons.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
             cons.setIddoctor(Integer.parseInt(request.getParameter("txtIdoctro")));
             cons.setFecha(request.getParameter("txtFecha"));
             cons.setDiagnostico(request.getParameter("txtDiagnostico"));
-            
-            datosC = new DatosConsultas(cons);
-            
+
+            datosC = new DatosConsultas(cnn);
             datosC.insertConsultas(cons);
-            
-            
-            
-            
             
             
         } catch (ClassNotFoundException ex) {

@@ -34,21 +34,14 @@ public class DepartamentosSVT extends HttpServlet {
             cnn = new Conexion();
             dep = new Departamentos();
             
-            dep.setIddepartamento(Integer.parseInt(request.getParameter("txtIddepartamento")));
+//            dep.setIddepartamento(Integer.parseInt(request.getParameter("txtIddepartamento")));
             dep.setNombre(request.getParameter("txtNombre"));
             dep.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
             
             
             datosD = new DatosDepartamentos(cnn);
             datosD.insertDepartamentos(dep);
-            
-            
-            
-            
-            
-            
-            
-            
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DepartamentosSVT.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

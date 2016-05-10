@@ -36,7 +36,7 @@ public class EmpleadosSVT extends HttpServlet {
             cnn = new Conexion();
             emp = new Empleados();
             
-            emp.setIdempleado(Integer.parseInt(request.getParameter("txtIdempleado")));
+//            emp.setIdempleado(Integer.parseInt(request.getParameter("txtIdempleado")));
             emp.setNombre(request.getParameter("txtNombre"));
             emp.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
             emp.setApeidoMaterno(request.getParameter("txtApeidoMaterno"));

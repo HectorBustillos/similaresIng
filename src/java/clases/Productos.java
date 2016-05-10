@@ -3,16 +3,16 @@ package clases;
 
 public class Productos {
     
-    private int idprodcuto, cantidad;
+    private int idproducto, cantidad;
     private String descripcion;
     private float precio;
 
-    public int getIdprodcuto() {
-        return idprodcuto;
+    public int getIdproducto() {
+        return idproducto;
     }
 
-    public void setIdprodcuto(int idprodcuto) {
-        this.idprodcuto = idprodcuto;
+    public void setIdproducto(int idproucto) {
+        this.idproducto = idproducto;
     }
 
     public int getCantidad() {

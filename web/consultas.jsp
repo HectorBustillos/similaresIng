@@ -99,26 +99,29 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir una Consulta</h4>
                   </div>
                   <div class="modal-body">
-                    <form>
-                        <div class="form-group">
+                      
+                     <!--No jala no se porque -->
+                      
+                    <form action="ConsultasSVT" method="post"> 
+<!--                        <div class="form-group">
                           <label># Consulta</label>
                           <input type="text" class="form-control" >
-                        </div>
+                        </div>-->
                         <div class="form-group">
                           <label>ID Cliente</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtIdcliente" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>ID Doctor</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtIdoctro" type="text" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Fecha</label>
-                          <input type="date" class="form-control" >
+                          <input name="txtFecha" type="date" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Diagnostico</label>
-                          <input type="text" class="form-control" >
+                          <input name="txtDiagnostico" type="text" class="form-control" >
                         </div>
                        <div class="modal-footer">
                             <button type="submit" class="btn btn-default">Guardar Cambios</button>

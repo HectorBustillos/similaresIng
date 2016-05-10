@@ -18,10 +18,10 @@ public class DatosProductos {
         
         cnn.ejecutarSQL(
                         "insert into Productos values("
-                        + pro.getIdprodcuto()
+                        + pro.getIdproducto()
                         +", '"+ pro.getDescripcion() +"'"
                         +", "+ pro.getPrecio() 
-                        +", "+ pro.getCantidad() );
+                        +", "+ pro.getCantidad() +")");
         
         
     }
