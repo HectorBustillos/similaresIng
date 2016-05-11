@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 
 @WebServlet(name = "ProductosSVT", urlPatterns = {"/ProductosSVT"})
@@ -47,8 +48,12 @@ public class ProductosSVT extends HttpServlet {
         
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ProductosSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
         } catch (SQLException ex) {
             Logger.getLogger(ProductosSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+        } finally {
+            response.sendRedirect("productos.jsp");  
         }
 
     }

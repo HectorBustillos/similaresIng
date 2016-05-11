@@ -35,7 +35,6 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="clientes.jsp">Clientes</a></li> <!-- <span class="sr-only">(current)</span> -->
               <li><a href="productos.jsp">Productos</a></li>
-              <li><a href="ventas.jsp">Ventas</a></li>
               <li><a href="empleados.jsp">Empleados</a></li>
               <li><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
@@ -71,16 +70,6 @@
                       <h3>Productos</h3>
                       <p>Alguna Descripcion...</p>
                       <p><a href="productos.jsp" class="btn btn-primary" role="button">Ver Productos</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3 hero-feature">
-                  <div class="thumbnail">
-                    <img src="assets/img/ventas.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Ventas</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="ventas.jsp" class="btn btn-primary" role="button">Ver Ventas</a></p>
                     </div>
                   </div>
                 </div>

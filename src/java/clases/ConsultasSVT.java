@@ -3,6 +3,7 @@ package clases;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 @WebServlet(name = "ConsultasSVT", urlPatterns = {"/ConsultasSVT"})
 public class ConsultasSVT extends HttpServlet {
@@ -37,7 +39,7 @@ public class ConsultasSVT extends HttpServlet {
 //            cons.setNumeroConsulta(Integer.parseInt(request.getParameter("txtNumeroConsulta")));
             cons.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
             cons.setIddoctor(Integer.parseInt(request.getParameter("txtIdoctro")));
-            cons.setFecha(request.getParameter("txtFecha"));
+            cons.setFecha(Date.valueOf(request.getParameter("txtFecha")));
             cons.setDiagnostico(request.getParameter("txtDiagnostico"));
 
             datosC = new DatosConsultas(cnn);
@@ -46,11 +48,14 @@ public class ConsultasSVT extends HttpServlet {
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ConsultasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
         } catch (SQLException ex) {
             Logger.getLogger(ConsultasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+        } finally {
+            response.sendRedirect("consultas.jsp");  
         }
-        
-        
+          
     }
 
 }

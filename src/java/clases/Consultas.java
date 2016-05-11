@@ -1,11 +1,14 @@
 
 package clases;
 
+import java.sql.Date;
+
 
 public class Consultas {
   
     private int numeroConsulta, idcliente, iddoctor;
-    private String fecha, diagnostico;
+    private String diagnostico;
+    private Date fecha;
 
     public int getNumeroConsulta() {
         return numeroConsulta;
@@ -31,11 +34,11 @@ public class Consultas {
         this.iddoctor = iddoctor;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 

@@ -1,8 +1,8 @@
-
 package clases;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 
 @WebServlet(name = "OfertasSVT", urlPatterns = {"/OfertasSVT"})
@@ -37,7 +38,7 @@ public class OfertasSVT extends HttpServlet {
 //            ofe.setIdoferta(Integer.parseInt(request.getParameter("txtIdoferta")));
             ofe.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
             ofe.setOferta(Integer.parseInt(request.getParameter("txtOferta")));
-            ofe.setFecha(request.getParameter("txtFecha"));
+            ofe.setFecha(Date.valueOf(request.getParameter("txtFecha")));
             
             
             datosO = new DatosOfertas(cnn);
@@ -45,8 +46,12 @@ public class OfertasSVT extends HttpServlet {
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(OfertasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
         } catch (SQLException ex) {
             Logger.getLogger(OfertasSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+        } finally {
+            response.sendRedirect("ofertas.jsp");  
         }
 
         

@@ -1,11 +1,13 @@
 
 package clases;
 
+import java.sql.Date;
+
 
 public class Ofertas {
     
     private int idoferta, idproducto, oferta;
-    private String fecha;
+    private Date fecha;
 
     public int getIdoferta() {
         return idoferta;
@@ -31,14 +33,16 @@ public class Ofertas {
         this.oferta = oferta;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
     
     
     
 }
+
+

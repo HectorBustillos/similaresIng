@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 @WebServlet(name = "DepartamentosSVT", urlPatterns = {"/DepartamentosSVT"})
 public class DepartamentosSVT extends HttpServlet {
@@ -44,8 +45,12 @@ public class DepartamentosSVT extends HttpServlet {
 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DepartamentosSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
         } catch (SQLException ex) {
             Logger.getLogger(DepartamentosSVT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+        } finally {
+            response.sendRedirect("departamentos.jsp");  
         }
         
         

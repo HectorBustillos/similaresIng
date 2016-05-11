@@ -35,7 +35,6 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="clientes.jsp">Clientes</a></li> <!-- <span class="sr-only">(current)</span> -->
               <li class="active"><a href="productos.jsp">Productos</a></li>
-              <li><a href="ventas.jsp">Ventas</a></li>
               <li><a href="empleados.jsp">Empleados</a></li>
               <li><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
