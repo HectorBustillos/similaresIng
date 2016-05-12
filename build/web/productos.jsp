@@ -70,7 +70,7 @@
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
                 <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarProductos">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProductos">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProductos">Añadir Datos</button>
             </div>
             
             

@@ -137,7 +137,7 @@
                     <div class="caption">
                       <h3>Doctores</h3>
                       <p>Alguna Descripcion...</p>
-                      <p><a href="#" class="btn btn-primary" role="button">Ver Doctores</a></p>
+                      <p><a href="doctores.jsp" class="btn btn-primary" role="button">Ver Doctores</a></p>
                     </div>
                   </div>
                 </div>
