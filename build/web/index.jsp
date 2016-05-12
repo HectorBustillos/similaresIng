@@ -34,13 +34,31 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="clientes.jsp">Clientes</a></li> <!-- <span class="sr-only">(current)</span> -->
-              <li><a href="productos.jsp">Productos</a></li>
-              <li><a href="empleados.jsp">Empleados</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="productos.jsp">Productos en General</a></li>
+                  <li><a href="productosOferta.jsp">Productos en Oferta</a></li>
+                </ul>
+               </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Empleados<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="empleados.jsp">Empleados en General</a></li>
+                  <li><a href="empleadosDoctores.jsp">Empleados Doctores</a></li>
+                </ul>
+               </li>
               <li><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
               <li><a href="departamentos.jsp">Departamentos</a></li>
               <li><a href="doctores.jsp">Doctores</a></li>
-              <li><a href="consultas.jsp">Consultas</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="consultas.jsp">Consultas en General</a></li>
+                  <li><a href="consultasClientes.jsp">Consultas por Clientes</a></li>
+                </ul>
+               </li>
             </ul>
           </div>
         </div>

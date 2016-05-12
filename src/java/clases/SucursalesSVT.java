@@ -33,16 +33,26 @@ public class SucursalesSVT extends HttpServlet {
             throws ServletException, IOException {
         
         try {
+            
+            int opcion = 0;
+            String opc = request.getParameter("cmd");
+            if(opc.equals("g")) opcion = 1;
+            else if(opc.equals("b")) opcion = 2;
+            
             cnn = new Conexion();
             suc = new Sucursales();
             
-//            suc.setIdsucursales(Integer.parseInt(request.getParameter("txtIdsucursales")));
-            suc.setNumempleado(Integer.parseInt(request.getParameter("txtNumempleado")));
-            suc.setTelefono(request.getParameter("txtTelefono"));
-            suc.setDireccion(request.getParameter("txtDireccion"));
-            
-            datosS = new DatosSucursales(cnn);
-            datosS.insertSucursales(suc);
+            if(opcion == 1){
+                suc.setNumempleado(Integer.parseInt(request.getParameter("txtNumempleado")));
+                suc.setTelefono(request.getParameter("txtTelefono"));
+                suc.setDireccion(request.getParameter("txtDireccion"));
+
+                datosS = new DatosSucursales(cnn);
+                datosS.insertSucursales(suc, opcion);
+            }else if(opcion == 2){
+                datosS = new DatosSucursales(cnn);
+                datosS.insertSucursales(null, opcion);
+            }
            
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(SucursalesSVT.class.getName()).log(Level.SEVERE, null, ex);

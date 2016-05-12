@@ -32,18 +32,28 @@ public class ConsultasSVT extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+            
+            int opcion = 0;
+            String opc = request.getParameter("cmd");
+            if(opc.equals("g")) opcion = 1;
+            else if(opc.equals("b")) opcion = 2;
+
             cnn = new Conexion();
             cons = new Consultas();
             
-            
-//            cons.setNumeroConsulta(Integer.parseInt(request.getParameter("txtNumeroConsulta")));
-            cons.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
-            cons.setIddoctor(Integer.parseInt(request.getParameter("txtIdoctro")));
-            cons.setFecha(Date.valueOf(request.getParameter("txtFecha")));
-            cons.setDiagnostico(request.getParameter("txtDiagnostico"));
+            if(opcion == 1){
+                cons.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
+                cons.setIddoctor(Integer.parseInt(request.getParameter("txtIdoctro")));
+                cons.setFecha(Date.valueOf(request.getParameter("txtFecha")));
+                cons.setDiagnostico(request.getParameter("txtDiagnostico"));
 
-            datosC = new DatosConsultas(cnn);
-            datosC.insertConsultas(cons);
+                datosC = new DatosConsultas(cnn);
+                datosC.insertConsultas(cons, opcion);
+            }else if(opcion == 2){
+                datosC = new DatosConsultas(cnn);
+                datosC.insertConsultas(null, opcion);
+            }
+            
             
             
         } catch (ClassNotFoundException ex) {

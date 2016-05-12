@@ -32,17 +32,26 @@ public class OfertasSVT extends HttpServlet {
             throws ServletException, IOException {
         
         try {
+            
+            int opcion = 0;
+            String opc = request.getParameter("cmd");
+            if(opc.equals("g")) opcion = 1;
+            else if(opc.equals("b")) opcion = 2;
+            
             cnn = new Conexion();
             ofe = new Ofertas();
             
-//            ofe.setIdoferta(Integer.parseInt(request.getParameter("txtIdoferta")));
-            ofe.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
-            ofe.setOferta(Integer.parseInt(request.getParameter("txtOferta")));
-            ofe.setFecha(Date.valueOf(request.getParameter("txtFecha")));
-            
-            
-            datosO = new DatosOfertas(cnn);
-            datosO.insertOferta(ofe);
+            if(opcion == 1){
+                ofe.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
+                ofe.setOferta(Integer.parseInt(request.getParameter("txtOferta")));
+                ofe.setFecha(Date.valueOf(request.getParameter("txtFecha")));
+
+                datosO = new DatosOfertas(cnn);
+                datosO.insertOferta(ofe, opcion);
+            }else if(opcion == 2){
+                datosO = new DatosOfertas(cnn);
+                datosO.insertOferta(null, opcion);
+            }
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(OfertasSVT.class.getName()).log(Level.SEVERE, null, ex);

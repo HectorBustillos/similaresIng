@@ -32,19 +32,28 @@ public class DoctoresSVT extends HttpServlet {
             throws ServletException, IOException {
         
         try {
+            
+            int opcion = 0;
+            String opc = request.getParameter("cmd");
+            if(opc.equals("g")) opcion = 1;
+            else if(opc.equals("b")) opcion = 2;
+            
             cnn = new Conexion();
             doc = new Doctores();
             
-//            doc.setIddoctores(Integer.parseInt(request.getParameter("txtIddoctores")));
-            doc.setNombre(request.getParameter("txtNombre"));
-            doc.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
-            doc.setApeidoMaterno(request.getParameter("txtApeidoMaaterno"));
-            doc.setTelefono(request.getParameter("txtTelefono"));
-            doc.setDireccion(request.getParameter("txtDireccion"));
+            if(opcion == 1){
+                doc.setNombre(request.getParameter("txtNombre"));
+                doc.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
+                doc.setApeidoMaterno(request.getParameter("txtApeidoMaaterno"));
+                doc.setTelefono(request.getParameter("txtTelefono"));
+                doc.setDireccion(request.getParameter("txtDireccion"));
             
-            
-            datosD = new DatosDoctores(cnn);
-            datosD.insertDoctores(doc);
+                datosD = new DatosDoctores(cnn);
+                datosD.insertDoctores(doc, opcion);
+            }else if(opcion == 2){
+                datosD = new DatosDoctores(cnn);
+                datosD.insertDoctores(null, opcion);
+            }
        
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DoctoresSVT.class.getName()).log(Level.SEVERE, null, ex);

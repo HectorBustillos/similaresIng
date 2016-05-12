@@ -2,7 +2,6 @@
 package clases;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,23 +31,31 @@ public class ClientesSVT extends HttpServlet {
             throws ServletException, IOException {
         
         try {
-            cnn = new Conexion();
-            cl = new Clientes();
-            
-//            cl.setIdcliente(Integer.parseInt(request.getParameter("txtClienteIdcliente")));
-            cl.setNombre(request.getParameter("txtClienteNombre"));
-            cl.setApeidoPaterno(request.getParameter("txtClienteApeidoPaterno"));
-            cl.setApeidoMaterno(request.getParameter("txtClienteApeidoMaterno"));
-            cl.setTelefono(request.getParameter("txtClienteTelefono"));
-            cl.setDireccion(request.getParameter("txtClienteDireccion"));
-            cl.setCodigoPostal(request.getParameter("txtClienteCodigoPostal"));
-            cl.setCiudad(request.getParameter("txtClienteCiudad"));
-            cl.setEstado(request.getParameter("txtClienteEstado"));
-            
-            datosC = new DatosClientes(cnn);
-            
-            datosC.insertClientes(cl);
-               
+                int opcion = 0;
+                String opc = request.getParameter("cmd");
+                if(opc.equals("g")) opcion = 1;
+                else if(opc.equals("b")) opcion = 2;
+
+
+                cnn = new Conexion();
+                cl = new Clientes();
+
+            if(opcion == 1){
+                cl.setNombre(request.getParameter("txtClienteNombre"));
+                cl.setApeidoPaterno(request.getParameter("txtClienteApeidoPaterno"));
+                cl.setApeidoMaterno(request.getParameter("txtClienteApeidoMaterno"));
+                cl.setTelefono(request.getParameter("txtClienteTelefono"));
+                cl.setDireccion(request.getParameter("txtClienteDireccion"));
+                cl.setCodigoPostal(request.getParameter("txtClienteCodigoPostal"));
+                cl.setCiudad(request.getParameter("txtClienteCiudad"));
+                cl.setEstado(request.getParameter("txtClienteEstado"));
+
+                datosC = new DatosClientes(cnn);
+                datosC.insertClientes(cl, opcion);
+            }else if(opcion == 2){
+                datosC = new DatosClientes(cnn);
+                datosC.insertClientes(null, opcion);
+            }
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ClientesSVT.class.getName()).log(Level.SEVERE, null, ex);

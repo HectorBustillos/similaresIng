@@ -34,24 +34,33 @@ public class ProductosSVT extends HttpServlet {
             throws ServletException, IOException {
         
         try {
+            
+            int opcion = 0;
+            String opc = request.getParameter("cmd");
+            if(opc.equals("g")) opcion = 1;
+            else if(opc.equals("b")) opcion = 2;
+
             cnn = new Conexion();
             pro = new Productos();
         
-//            pro.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
-            pro.setDescripcion(request.getParameter("txtdescripcion"));
-            pro.setPrecio(Float.parseFloat(request.getParameter("txtPrecio")));
-            pro.setCantidad(Integer.parseInt(request.getParameter("txtCantidad")));
-            
-            datosP = new DatosProductos(cnn);
-            
-            datosP.insertProductos(pro);
+            if(opcion == 1){
+                pro.setDescripcion(request.getParameter("txtdescripcion"));
+                pro.setPrecio(Float.parseFloat(request.getParameter("txtPrecio")));
+                pro.setCantidad(Integer.parseInt(request.getParameter("txtCantidad")));
+
+                datosP = new DatosProductos(cnn);
+                datosP.insertProductos(pro, opcion);
+            }else if(opcion == 2){
+                datosP = new DatosProductos(cnn);
+                datosP.insertProductos(null, opcion);
+            }
         
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ProductosSVT.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null,"ERROR1: " + ex.getMessage());
         } catch (SQLException ex) {
             Logger.getLogger(ProductosSVT.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null,"ERROR: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null,"ERROR2: " + ex.getMessage());
         } finally {
             response.sendRedirect("productos.jsp");  
         }
