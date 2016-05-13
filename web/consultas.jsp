@@ -8,7 +8,6 @@
         <title>Consultas</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -52,10 +51,10 @@
               <li><a href="ofertas.jsp">Ofertas</a></li>
               <li><a href="departamentos.jsp">Departamentos</a></li>
               <li><a href="doctores.jsp">Doctores</a></li>
-              <li class="dropdown">
+              <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="consultas.jsp">Consultas en General</a></li>
+                  <li class="active"><a href="consultas.jsp">Consultas en General</a></li>
                   <li><a href="consultasClientes.jsp">Consultas por Clientes</a></li>
                 </ul>
                </li>
@@ -69,8 +68,8 @@
                 <h1>Tabla de Consultas</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarConsultas">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalConsultas">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarConsultas">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalConsultas">Añadir Datos</button>
             </div>
             
             
@@ -120,26 +119,34 @@
                       
                      <!--No jala no se porque -->
                       
-                    <form action="ConsultasSVT" method="post"> 
+                    <form class="form-horizontal" action="ConsultasSVT" method="post"> 
 <!--                        <div class="form-group">
                           <label># Consulta</label>
                           <input type="text" class="form-control" >
                         </div>-->
                         <div class="form-group">
-                          <label>ID Cliente</label>
-                          <input name="txtIdcliente" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">ID Cliente</label>
+                          <div class="col-lg-9">
+                              <input name="txtIdcliente" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>ID Doctor</label>
-                          <input name="txtIdoctro" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">ID Doctor</label>
+                          <div class="col-lg-9">
+                              <input name="txtIdoctro" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Fecha</label>
-                          <input name="txtFecha" type="date" class="form-control" >
+                          <label class="col-lg-3 control-label">Fecha</label>
+                          <div class="col-lg-9">
+                              <input name="txtFecha" type="date" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Diagnostico</label>
-                          <textarea name="txtDiagnostico" type="text" class="form-control" rows="3" style="max-width: 100%"></textarea>
+                          <label class="col-lg-3 control-label">Diagnostico</label>
+                          <div class="col-lg-9">
+                             <textarea name="txtDiagnostico" type="text" class="form-control" rows="3" style="max-width: 100%"></textarea>
+                          </div>
                         </div>
                        <div class="modal-footer">
                             <button name="cmd" type="submit" class="btn btn-default" value="g">Guardar Cambios</button>

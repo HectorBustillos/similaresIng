@@ -8,7 +8,6 @@
         <title>Productos</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,10 +33,10 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="clientes.jsp">Clientes</a></li> <!-- <span class="sr-only">(current)</span> -->
-              <li class="dropdown">
+              <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="productos.jsp">Productos en General</a></li>
+                <ul class="dropdown-menu ">
+                  <li class="active"><a href="productos.jsp">Productos en General</a></li>
                   <li><a href="productosOferta.jsp">Productos en Oferta</a></li>
                 </ul>
                </li>
@@ -69,15 +68,15 @@
                 <h1>Tabla de Productos</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarProductos">Borrar Tabla</button>
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProductos">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarProductos">Borrar Tabla</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalProductos">Añadir Datos</button>
             </div>
             
             
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
-                        <th>#Producto</th>
+                        <th>ID Producto</th>
                         <th>Descripccion</th>
                         <th>Precio</th>
                         <th>cantidad</th>
@@ -114,22 +113,24 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Producto</h4>
                   </div>
                   <div class="modal-body">
-                    <form action="ProductosSVT" method="post">
-<!--                        <div class="form-group">
-                          <label>ID Producto</label>
-                          <input name="txtIdproducto" type="text" class="form-control">
-                        </div>-->
+                    <form class="form-horizontal" action="ProductosSVT" method="post">
                         <div class="form-group">
-                          <label>Descripcion</label>
-                          <input name="txtdescripcion" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">Descripcion</label>
+                          <div class="col-lg-9">
+                            <input name="txtdescripcion" type="text" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Precio</label>
-                          <input name="txtPrecio" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">Precio</label>
+                          <div class="col-lg-9">
+                            <input name="txtPrecio" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Cantidad</label>
-                          <input name="txtCantidad" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">Cantidad</label>
+                          <div class="col-lg-9">
+                              <input name="txtCantidad" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="modal-footer">
                             <button name="cmd" value="g" type="submit" class="btn btn-default">Guardar Cambios</button>

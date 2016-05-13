@@ -8,7 +8,6 @@
         <title>Doctores</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -51,7 +50,7 @@
               <li><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
               <li><a href="departamentos.jsp">Departamentos</a></li>
-              <li><a href="doctores.jsp">Doctores</a></li>
+              <li class="active"><a href="doctores.jsp">Doctores</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -69,8 +68,8 @@
                 <h1>Tabla de Doctores</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarDoctores">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalDoctores">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarDoctores">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalDoctores">Añadir Datos</button>
             </div>
             
             
@@ -78,6 +77,7 @@
                 <thead>
                     <tr>
                         <th>ID Doctor</th>
+                        <th>ID Empleado</th>
                         <th>Nombre</th>
                         <th>Telefono</th>
                         <th>Direccion</th>
@@ -91,6 +91,7 @@
 
                       while(rs.next()){ 
                         String idDoctor = rs.getString("idDoctor");
+                        String idEmpleado = rs.getString("idEmpleado");
                         String nombre = rs.getString("nombre");
                         String apeidoPaterno = rs.getString("apeidoPaterno");
                         String apeidoMaterno = rs.getString("apeidoMaterno");
@@ -99,6 +100,7 @@
                     %>
                         <tr>
                             <td> <%= idDoctor %> </td>
+                            <td> <%= idEmpleado %> </td>
                             <td> <%= nombre + " " + apeidoPaterno + " " + apeidoMaterno %></td>
                             <td> <%= telefono %> </td>
                             <td> <%= direccion %> </td>
@@ -116,30 +118,42 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Doctor</h4>
                   </div>
                   <div class="modal-body">
-                    <form action="DoctoresSVT" method="post">
-<!--                        <div class="form-group">
-                          <label>ID Doctor</label>
-                          <input type="text" class="form-control" >
-                        </div>-->
+                    <form class="form-horizontal" action="DoctoresSVT" method="post">
                         <div class="form-group">
-                          <label>Nombre</label>
-                          <input name="txtNombre" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">ID Empleado</label>
+                          <div class="col-lg-9">
+                              <input name="txtidEmpleado" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>A. Paterno</label>
-                          <input name="txtApeidoPaterno" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">Nombre</label>
+                          <div class="col-lg-9">
+                              <input name="txtNombre" type="text" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>A. Materno</label>
-                          <input name="txtApeidoMaaterno" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">Apellido Paterno</label>
+                          <div class="col-lg-9">
+                              <input name="txtApeidoPaterno" type="text" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Telefono</label>
-                          <input name="txtTelefono" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">Apellido Materno</label>
+                          <div class="col-lg-9">
+                              <input name="txtApeidoMaaterno" type="text" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Direccion</label>
-                          <input name="txtDireccion" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">Telefono</label>
+                          <div class="col-lg-9">
+                              <input name="txtTelefono" type="number" class="form-control" >
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Direccion</label>
+                          <div class="col-lg-9">
+                              <input name="txtDireccion" type="text" class="form-control" >
+                          </div>
                         </div>
                        <div class="modal-footer">
                             <button name="cmd" type="submit" class="btn btn-default" value="g">Guardar Cambios</button>

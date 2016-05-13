@@ -3,9 +3,17 @@ package clases;
 
 public class Doctores {
     
-    private int iddoctores;
+    private int iddoctores, idEmpleado;
     private String nombre, apeidoPaterno, apeidoMaterno;
     private String telefono, direccion;
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
 
     public int getIddoctores() {
         return iddoctores;

@@ -8,7 +8,6 @@
         <title>Departamentos</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -50,7 +49,7 @@
                </li>
               <li><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
-              <li><a href="departamentos.jsp">Departamentos</a></li>
+              <li class="active"><a href="departamentos.jsp">Departamentos</a></li>
               <li><a href="doctores.jsp">Doctores</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas<span class="caret"></span></a>
@@ -69,8 +68,8 @@
                 <h1>Tabla de Departamentos</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarDepartamentos">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalDepartamentos">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarDepartamentos">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalDepartamentos">Añadir Datos</button>
             </div>
             
             
@@ -111,24 +110,24 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir un Departamento</h4>
                   </div>
                   <div class="modal-body">
-                    <form action="DepartamentosSVT" method="post">
-<!--                        <div class="form-group">
-                          <label>ID Departamento</label>
-                          <input type="text" class="form-control" >
-                        </div>-->
+                    <form class="form-horizontal" action="DepartamentosSVT" method="post">
                         <div class="form-group">
-                          <label>Nombre</label>
-                          <select name="txtNombre" class="form-control">
-                            <option value="Medicinas">Medicinas</option>
-                            <option value="Dulcecitos">Dulcecitos</option>
-                            <option value="Condones">Condones</option>
-                            <option value="Papitas">Papitas</option>
-                            <option value="Jarabes">Jarabes</option>
-                          </select>
+                          <label class="col-lg-3 control-label">Nombre</label>
+                          <div class="col-lg-9">
+                              <select name="txtNombre" class="form-control">
+                                <option value="Medicamento">Medicamento</option>
+                                <option value="Vitamina">Vitamina</option>
+                                <option value="AseoPersonal">Aseo Personal</option>
+                                <option value="Instrumento">Instrumento</option>
+                                <option value="Comestible">Comestible</option>
+                              </select>
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>ID Producto</label>
-                          <input name="txtIdproducto" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">#Producto</label>
+                          <div class="col-lg-9">
+                              <input name="txtIdproducto" type="number" class="form-control" >
+                          </div>
                         </div>  
                        <div class="modal-footer">
                             <button name="cmd" type="submit" class="btn btn-default" value="g">Guardar Cambios</button>

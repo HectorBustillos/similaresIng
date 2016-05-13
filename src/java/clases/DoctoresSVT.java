@@ -42,6 +42,7 @@ public class DoctoresSVT extends HttpServlet {
             doc = new Doctores();
             
             if(opcion == 1){
+                doc.setIdEmpleado(Integer.parseInt(request.getParameter(("txtidEmpleado"))));
                 doc.setNombre(request.getParameter("txtNombre"));
                 doc.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
                 doc.setApeidoMaterno(request.getParameter("txtApeidoMaaterno"));

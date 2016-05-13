@@ -24,7 +24,8 @@ public class DatosDoctores {
                         +", '"+ doc.getApeidoPaterno() +"'"
                         +", '"+ doc.getApeidoMaterno() +"'"
                         +", '"+ doc.getTelefono() +"'"
-                        +", '"+ doc.getDireccion() +"')"
+                        +", '"+ doc.getDireccion() +"'"
+                        +", '"+ doc.getIdEmpleado() +"')"
             );
         }else if(opcion == 2){
             cnn.ejecutarSQL("delete from Doctores");    

@@ -8,7 +8,6 @@
         <title>Sucursales</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -48,7 +47,7 @@
                   <li><a href="empleadosDoctores.jsp">Empleados Doctores</a></li>
                 </ul>
                </li>
-              <li><a href="sucursales.jsp">Sucursales</a></li>
+              <li class="active"><a href="sucursales.jsp">Sucursales</a></li>
               <li><a href="ofertas.jsp">Ofertas</a></li>
               <li><a href="departamentos.jsp">Departamentos</a></li>
               <li><a href="doctores.jsp">Doctores</a></li>
@@ -69,8 +68,8 @@
                 <h1>Tabla de Sucursales</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarSucursales">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalVentas">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarSucursales">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalVentas">Añadir Datos</button>
             </div>
             
             
@@ -114,22 +113,28 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir una Sucursal</h4>
                   </div>
                   <div class="modal-body">
-                    <form action="SucursalesSVT" method="post">
+                    <form class="form-horizontal" action="SucursalesSVT" method="post">
 <!--                        <div class="form-group">
                           <label>ID Sucursal</label>
                           <input type="text" class="form-control" >
                         </div>-->
                         <div class="form-group">
-                          <label>Cantidad de Empleados</label>
-                          <input name="txtNumempleado" name="" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">Cantidad de Empleados</label>
+                          <div class="col-lg-9">
+                              <input name="txtNumempleado" name="" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Telefono</label>
-                          <input name="txtTelefono" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">Telefono</label>
+                          <div class="col-lg-9">
+                            <input name="txtTelefono" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Direccion</label>
-                          <input name="txtDireccion" type="text" class="form-control" >
+                          <label class="col-lg-3 control-label">Direccion</label>
+                          <div class="col-lg-9">
+                              <input name="txtDireccion" type="text" class="form-control" >
+                          </div>
                         </div>
                        <div class="modal-footer">
                             <button name="cmd" type="submit" class="btn btn-default" value="g">Guardar Cambios</button>

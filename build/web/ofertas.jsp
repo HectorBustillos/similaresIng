@@ -8,7 +8,6 @@
         <title>Ofertas</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -49,7 +48,7 @@
                 </ul>
                </li>
               <li><a href="sucursales.jsp">Sucursales</a></li>
-              <li><a href="ofertas.jsp">Ofertas</a></li>
+              <li class="active"><a href="ofertas.jsp">Ofertas</a></li>
               <li><a href="departamentos.jsp">Departamentos</a></li>
               <li><a href="doctores.jsp">Doctores</a></li>
               <li class="dropdown">
@@ -69,8 +68,8 @@
                 <h1>Tabla de Ofertas</h1>
             </div>  
             <div class="col-xs-12 col-md-4 top_table_title" style="padding-top: 30px;">
-                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger" data-toggle="modal" data-target="#borrarOfertas">Borrar Tabla</button>
-                <button style="float: right;" type="button" class="btn btn-success" data-toggle="modal" data-target="#modalOfertas">Añadir Datos</button>
+                <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarOfertas">Borrar Tabla</button>
+                <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalOfertas">Añadir Datos</button>
             </div>
             
             
@@ -114,26 +113,32 @@
                     <h4 class="modal-title" id="myModalLabel">Añadir una Oferta</h4>
                   </div>
                   <div class="modal-body">
-                    <form action="OfertasSVT" method="post">
+                    <form class="form-horizontal" action="OfertasSVT" method="post">
 <!--                        <div class="form-group">
                           <label>ID Oferta</label>
                           <input type="text" class="form-control" >
                         </div>-->
                         <div class="form-group">
-                          <label>ID Producto</label>
-                          <input name="txtIdproducto" type="number" class="form-control" >
+                          <label class="col-lg-3 control-label">ID Producto</label>
+                          <div class="col-lg-9">
+                              <input name="txtIdproducto" type="number" class="form-control" >
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Oferta</label>
-                          <input name="txtOferta" type="number" class="form-control" placeholder="15%">
+                          <label class="col-lg-3 control-label">Oferta</label>
+                          <div class="col-lg-9">
+                            <input name="txtOferta" type="number" class="form-control" placeholder="15%">
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label>Fecha</label>
-                          <input name="txtFecha" type="date" class="form-control" >
+                          <label class="col-lg-3 control-label">Fecha</label>
+                          <div class="col-lg-9">
+                            <input name="txtFecha" type="date" class="form-control" >
+                          </div>
                         </div>
                        <div class="modal-footer">
-                            <button name="cmd" type="submit" class="btn btn-default" value="g">Guardar Cambios</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            <button name="cmd" type="submit" class="btn btn-default btn-sm" value="g">Guardar Cambios</button>
+                            <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
                         </div>
                     </form>
                   </div>
