@@ -10,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
      
     </head>
     <body>
@@ -176,9 +175,9 @@
                           <label class="col-lg-3 control-label">Turno</label>
                           <div class="col-lg-9">
                               <select name="txtTurno" class="form-control">
-                                <option value="General">Matutino</option>
-                                <option value="Limpieza">Vespertino</option>
-                                <option value="Doctor">Nocturno</option>
+                                <option value="Matutino">Matutino</option>
+                                <option value="Vespertino">Vespertino</option>
+                                <option value="Nocturno">Nocturno</option>
                               </select>
                           </div>
                         </div>

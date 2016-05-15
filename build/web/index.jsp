@@ -9,9 +9,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
-        
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
-     
+            
     </head>
     <body ng-controller="mainController">
         <nav class="navbar navbar-default navbar-fixed-top">

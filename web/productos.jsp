@@ -10,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
      
     </head>
     <body>
@@ -92,13 +91,13 @@
                         String idProducto = rs.getString("idProducto");
                         String descripcion = rs.getString("descripcion");
                         String precio = rs.getString("precio");
-                        String fecha = rs.getString("cantidad");
+                        String cantidad = rs.getString("cantidad");
                     %>
                         <tr>
                             <td> <%= idProducto %> </td>
                             <td> <%= descripcion %> </td>
-                            <td> <%="$" + precio %> </td>
-                            <td> <%= fecha %> </td>
+                            <td> <%="$" + precio + ".00"%> </td>
+                            <td> <%= cantidad + " Unidades"%> </td>
                         </tr>
                     <%}%>
                 </tbody>

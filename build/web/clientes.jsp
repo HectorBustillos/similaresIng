@@ -10,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="icon" href="simidoc.ico">
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
      
     </head>
     <body>
@@ -63,7 +62,6 @@
         </div><!-- /.container-fluid -->
       </nav>
         <div class="wrap row">
-            
             <div class="col-xs-12 col-md-8 top_table_title">
                 <h1>Tabla de Clientes</h1>
             </div>  
@@ -71,8 +69,6 @@
                 <button style="float: right; margin-left: 5px;" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarClientes">Borrar Tabla</button>
                 <button style="float: right;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalClientes">Añadir Datos</button>
             </div>
-            
-            
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
