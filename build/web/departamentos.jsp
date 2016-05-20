@@ -116,7 +116,7 @@
                               <select name="txtNombre" class="form-control">
                                 <option value="Medicamento">Medicamento</option>
                                 <option value="Vitamina">Vitamina</option>
-                                <option value="AseoPersonal">Aseo Personal</option>
+                                <option value="Aseo Personal">Aseo Personal</option>
                                 <option value="Instrumento">Instrumento</option>
                                 <option value="Comestible">Comestible</option>
                               </select>

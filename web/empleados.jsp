@@ -167,7 +167,7 @@
                                 <option value="General">General</option>
                                 <option value="Limpieza">Limpieza</option>
                                 <option value="Doctor">Doctor</option>
-                                <option value="Nadie">Otro</option>
+                                <option value="Nadie">Nadie</option>
                               </select>
                           </div>
                         </div>

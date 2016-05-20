@@ -84,7 +84,7 @@
                     <%
                         Conexion cx = new Conexion();
                         
-                        ResultSet rs = cx.consultar("select consultas.diagnostico, consultas.numeroConsulta, clientes.nombre, clientes.apeidoPaterno, clientes.apeidoMaterno, consultas.idDoctor, consultas.fecha, clientes.telefono  from consultas join clientes using(idcliente) order by idcliente");            
+                        ResultSet rs = cx.consultar("select consultas.diagnostico, consultas.numeroConsulta, clientes.nombre, clientes.apeidoPaterno, clientes.apeidoMaterno, consultas.idDoctor, consultas.fecha, clientes.telefono  from consultas join clientes using(idcliente) order by consultas.numeroConsulta");            
 
                       while(rs.next()){ 
                         String numeroConsulta = rs.getString("consultas.numeroConsulta");

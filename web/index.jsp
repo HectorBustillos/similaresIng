@@ -64,90 +64,38 @@
             <div class="row">
                 <div class="page-header">
                     <h1>Farmacias Similares <small>  Base de datos</small></h1><br>
-                    <p>
-                        Alguna descripcion de la pagina aqui...
-                    </p>
-                </div>
-                <div class="col-sm-4 col-md-3 hero-feature">
-                  <div class="thumbnail">
-                    <img src="assets/img/clientes.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Clientes</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="clientes.jsp" class="btn btn-default" role="button">Ver Clientes</a></p>
+                    <div class="col-lg-12">
+                        <h2>Historia</h2>
+                        <p>
+                            Farmacias Similares, perteneciente al Grupo Por un País Mejor, fue constituida el 8 de Septiembre de 1997, con la finalidad de ofrecer productos y servicios de salud a los estratos más desprotegidos del país.
+                            En 2002, Farmacias Similares intensificó su presencia con más de 1000 sucursales en todo México. 
+                            En 2003, la cadena farmacéutica arribó a Guatemala, dando el primer paso para su internacionalización.
+                            Actualmente, existen más de 5000 sucursales y franquicias establecidas en todo México, Chile y Guatemala.
+                            Farmacias Similares es la empresa líder en Venta y Distribución de Medicamentos Genéricos y Productos de Salud en México y América Latina.
+                        </p>
                     </div>
-                  </div>
                 </div>
-                <div class="col-sm-4 col-md-3 hero-feature">
-                  <div class="thumbnail">
-                    <img src="assets/img/productos.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Productos</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="productos.jsp" class="btn btn-default" role="button">Ver Productos</a></p>
+                <div class="col-lg-12">
+                    
+                </div>
+                <div class="col-lg-4">
+                        <h2>Filosofia</h2>
+                        <p>
+                            Para nuestro fundador, Don Víctor González Torres, todos tenemos algo bueno que compartir: tu sonrisa, tu tiempo, tu talento, etc. Dar es la expresión más noble del ser humano, la que lo identifica y lo hermana, así entonces nuestra filosofía se basa en aprender a dar a los demás. 
+                        </p>
                     </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="thumbnail">
-                    <img src="assets/img/empleados.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Empleados</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="empleados.jsp" class="btn btn-default" role="button">Ver Empleados</a></p>
+                    <div class="col-lg-4">
+                        <h2>Mision</h2>
+                        <p>
+                            Mejorar el nivel de vida de la humanidad, ofreciendo productos y servicios de salud de calidad al alcance de todos. 
+                        </p>
                     </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="thumbnail">
-                    <img src="assets/img/sucursales.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Sucursales</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="sucursales.jsp" class="btn btn-default" role="button">Ver Sucursales</a></p>
+                    <div class="col-lg-4">
+                        <h2>Vision</h2>
+                        <p>
+                            Ser reconocida como modelo de calidad, servicio y confianza, con procesos eficaces y eficientes, en un clima laboral agradable que genere bienestar y orgullo de pertenencia. 
+                        </p>
                     </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="thumbnail">
-                    <img src="assets/img/ofertas.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Ofertas</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="ofertas.jsp" class="btn btn-default" role="button">Ver Ofertas</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="thumbnail">
-                    <img src="assets/img/departamentos.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Departamentos</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="departamentos.jsp" class="btn btn-default" role="button">Ver Departamentos</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="thumbnail">
-                    <img src="assets/img/doctores.jpg" alt="img" >
-                    <div class="caption">
-                      <h3>Doctores</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="doctores.jsp" class="btn btn-default" role="button">Ver Doctores</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3" >
-                  <div class="thumbnail">
-                    <img src="assets/img/consultas.jpg" alt="img">
-                    <div class="caption">
-                      <h3>Consultas</h3>
-                      <p>Alguna Descripcion...</p>
-                      <p><a href="consultas.jsp" class="btn btn-default" role="button">Ver Consultas</a></p>
-                    </div>
-                  </div>
-                </div>
              </div>
             
         </div>
